@@ -1,0 +1,40 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Jul 29 17:16:27 2020
+| Host         : LAPTOP-CVUIJIL5 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file PWM_Demo_methodology_drc_routed.rpt -pb PWM_Demo_methodology_drc_routed.pb -rpx PWM_Demo_methodology_drc_routed.rpx
+| Design       : PWM_Demo
+| Device       : xc7s15ftgb196-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 1
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| TIMING-18 | Warning  | Missing input or output delay | 1          |
++-----------+----------+-------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-18#1 Warning
+Missing input or output delay  
+An output delay is missing on PWM relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+

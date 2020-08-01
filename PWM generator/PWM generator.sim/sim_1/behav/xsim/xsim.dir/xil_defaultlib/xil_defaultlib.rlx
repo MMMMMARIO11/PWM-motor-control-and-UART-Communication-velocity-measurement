@@ -1,0 +1,8 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+D:/summer project/PWM/PWM generator/PWM generator.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+D:/summer project/PWM/PWM generator/PWM generator.srcs/sim_1/new/Test_Bench.v,1596012795,verilog,,,,Test_Bench,,,,,,,,
+D:/summer project/PWM/PWM generator/PWM generator.srcs/sources_1/new/Driver_PWM.v,1595770062,verilog,,D:/summer project/PWM/PWM generator/PWM generator.srcs/sources_1/new/PWM_Demo.v,,Driver_PWM,,,,,,,,
+D:/summer project/PWM/PWM generator/PWM generator.srcs/sources_1/new/PWM_Demo.v,1596014074,verilog,,D:/summer project/PWM/PWM generator/PWM generator.srcs/sim_1/new/Test_Bench.v,,PWM_Demo,,,,,,,,

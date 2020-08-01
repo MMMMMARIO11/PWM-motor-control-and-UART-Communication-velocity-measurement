@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../PWM generator.srcs/sources_1/new/Driver_PWM.v" \
+"../../../../PWM generator.srcs/sources_1/new/PWM_Demo.v" \
+"../../../../PWM generator.srcs/sim_1/new/Test_Bench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

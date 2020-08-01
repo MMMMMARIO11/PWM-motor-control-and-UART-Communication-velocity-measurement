@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7s15ftgb196-1" LaunchTime="1596014082">
+  <File Type="ROUTE-PWR" Name="PWM_Demo_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="PWM_Demo.tcl"/>
+  <File Type="BITSTR-BMM" Name="PWM_Demo_bd.bmm"/>
+  <File Type="ROUTE-PWR-SUM" Name="PWM_Demo_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="PWM_Demo_reports.tcl"/>
+  <File Type="OPT-DCP" Name="PWM_Demo_opt.dcp"/>
+  <File Type="OPT-DRC" Name="PWM_Demo_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="PWM_Demo.hwdef"/>
+  <File Type="PWROPT-DCP" Name="PWM_Demo_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="PWM_Demo_placed.dcp"/>
+  <File Type="PLACE-IO" Name="PWM_Demo_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="PWM_Demo_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="PWM_Demo_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="PWM_Demo_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="PWM_Demo_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="PWM_Demo.bgn"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="PWM_Demo_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="PWM_Demo.bin"/>
+  <File Type="PHYSOPT-DCP" Name="PWM_Demo_physopt.dcp"/>
+  <File Type="BITSTR-MSK" Name="PWM_Demo.msk"/>
+  <File Type="ROUTE-ERROR-DCP" Name="PWM_Demo_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="PWM_Demo_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="PWM_Demo_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="PWM_Demo_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="PWM_Demo_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="PWM_Demo_drc_routed.rpx"/>
+  <File Type="BITSTR-LTX" Name="PWM_Demo.ltx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="PWM_Demo_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="PWM_Demo.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="PWM_Demo_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="PWM_Demo_methodology_drc_routed.pb"/>
+  <File Type="BITSTR-SYSDEF" Name="PWM_Demo.sysdef"/>
+  <File Type="ROUTE-PWR-RPX" Name="PWM_Demo_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="PWM_Demo_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="PWM_Demo_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="PWM_Demo_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="PWM_Demo_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="PWM_Demo_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-CLK" Name="PWM_Demo_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="PWM_Demo_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="PWM_Demo_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="PWM_Demo_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="PWM_Demo_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="PWM_Demo_postroute_physopt_bb.dcp"/>
+  <File Type="BG-BIT" Name="PWM_Demo.bit"/>
+  <File Type="BITSTR-RBT" Name="PWM_Demo.rbt"/>
+  <File Type="BITSTR-NKY" Name="PWM_Demo.nky"/>
+  <File Type="BG-DRC" Name="PWM_Demo.drc"/>
+  <File Type="RDI-RDI" Name="PWM_Demo.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/Driver_PWM.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/PWM_Demo.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="PWM_Demo"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/system.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

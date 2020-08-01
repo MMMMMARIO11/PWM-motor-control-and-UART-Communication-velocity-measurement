@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/summer project/PWM/PWM generator/PWM generator.srcs/sources_1/new/Driver_PWM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Driver_PWM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/summer project/PWM/PWM generator/PWM generator.srcs/sources_1/new/PWM_Demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PWM_Demo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/summer project/PWM/PWM generator/PWM generator.srcs/sim_1/new/Test_Bench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Test_Bench
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/summer project/PWM/PWM generator/PWM generator.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

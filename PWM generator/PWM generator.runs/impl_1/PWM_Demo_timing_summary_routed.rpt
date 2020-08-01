@@ -1,0 +1,1539 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Jul 29 17:16:28 2020
+| Host         : LAPTOP-CVUIJIL5 running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file PWM_Demo_timing_summary_routed.rpt -pb PWM_Demo_timing_summary_routed.pb -rpx PWM_Demo_timing_summary_routed.rpx -warn_on_violation
+| Design       : PWM_Demo
+| Device       : 7s15-ftgb196
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There is 1 port with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      5.387        0.000                      0                   33        0.287        0.000                      0                   33        4.500        0.000                       0                    34  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock        Waveform(ns)       Period(ns)      Frequency(MHz)
+-----        ------------       ----------      --------------
+sys_clk_pin  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk_pin         5.387        0.000                      0                   33        0.287        0.000                      0                   33        4.500        0.000                       0                    34  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :            0  Failing Endpoints,  Worst Slack        5.387ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.287ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             5.387ns  (required time - arrival time)
+  Source:                 Driver_PWM0/Period_Cnt_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Driver_PWM0/Period_Cnt_reg[30]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.565ns  (logic 2.433ns (53.296%)  route 2.132ns (46.704%))
+  Logic Levels:           9  (CARRY4=8 LUT2=1)
+  Clock Path Skew:        -0.042ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.915ns = ( 14.915 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.216ns
+    Clock Pessimism Removal (CPR):    0.259ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         1.431     1.431 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.990     3.421    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.517 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          1.699     5.216    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y40         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y40         FDRE (Prop_fdre_C_Q)         0.456     5.672 r  Driver_PWM0/Period_Cnt_reg[1]/Q
+                         net (fo=5, routed)           1.114     6.786    Driver_PWM0/Period_Cnt[1]
+    SLICE_X36Y37         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.656     7.442 r  Driver_PWM0/Period_Cnt_reg[4]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.442    Driver_PWM0/Period_Cnt_reg[4]_i_2_n_0
+    SLICE_X36Y38         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.556 r  Driver_PWM0/Period_Cnt_reg[8]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.556    Driver_PWM0/Period_Cnt_reg[8]_i_2_n_0
+    SLICE_X36Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.670 r  Driver_PWM0/Period_Cnt_reg[12]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.670    Driver_PWM0/Period_Cnt_reg[12]_i_2_n_0
+    SLICE_X36Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.784 r  Driver_PWM0/Period_Cnt_reg[16]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.784    Driver_PWM0/Period_Cnt_reg[16]_i_2_n_0
+    SLICE_X36Y41         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.898 r  Driver_PWM0/Period_Cnt_reg[20]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.898    Driver_PWM0/Period_Cnt_reg[20]_i_2_n_0
+    SLICE_X36Y42         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.012 r  Driver_PWM0/Period_Cnt_reg[24]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.012    Driver_PWM0/Period_Cnt_reg[24]_i_2_n_0
+    SLICE_X36Y43         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.126 r  Driver_PWM0/Period_Cnt_reg[28]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.126    Driver_PWM0/Period_Cnt_reg[28]_i_2_n_0
+    SLICE_X36Y44         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.460 r  Driver_PWM0/Period_Cnt_reg[31]_i_2/O[1]
+                         net (fo=1, routed)           1.018     9.478    Driver_PWM0/Period_Cnt0[30]
+    SLICE_X35Y39         LUT2 (Prop_lut2_I0_O)        0.303     9.781 r  Driver_PWM0/Period_Cnt[30]_i_1/O
+                         net (fo=1, routed)           0.000     9.781    Driver_PWM0/Period_Cnt[30]_i_1_n_0
+    SLICE_X35Y39         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[30]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    H4                                                0.000    10.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000    10.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         1.361    11.361 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.886    13.247    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.338 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          1.577    14.915    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X35Y39         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[30]/C
+                         clock pessimism              0.259    15.174    
+                         clock uncertainty           -0.035    15.139    
+    SLICE_X35Y39         FDRE (Setup_fdre_C_D)        0.029    15.168    Driver_PWM0/Period_Cnt_reg[30]
+  -------------------------------------------------------------------
+                         required time                         15.168    
+                         arrival time                          -9.781    
+  -------------------------------------------------------------------
+                         slack                                  5.387    
+
+Slack (MET) :             5.468ns  (required time - arrival time)
+  Source:                 Driver_PWM0/Period_Cnt_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Driver_PWM0/Period_Cnt_reg[18]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.501ns  (logic 2.091ns (46.454%)  route 2.410ns (53.546%))
+  Logic Levels:           6  (CARRY4=5 LUT2=1)
+  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.915ns = ( 14.915 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.216ns
+    Clock Pessimism Removal (CPR):    0.275ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         1.431     1.431 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.990     3.421    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.517 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          1.699     5.216    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y40         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y40         FDRE (Prop_fdre_C_Q)         0.456     5.672 r  Driver_PWM0/Period_Cnt_reg[1]/Q
+                         net (fo=5, routed)           1.114     6.786    Driver_PWM0/Period_Cnt[1]
+    SLICE_X36Y37         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.656     7.442 r  Driver_PWM0/Period_Cnt_reg[4]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.442    Driver_PWM0/Period_Cnt_reg[4]_i_2_n_0
+    SLICE_X36Y38         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.556 r  Driver_PWM0/Period_Cnt_reg[8]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.556    Driver_PWM0/Period_Cnt_reg[8]_i_2_n_0
+    SLICE_X36Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.670 r  Driver_PWM0/Period_Cnt_reg[12]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.670    Driver_PWM0/Period_Cnt_reg[12]_i_2_n_0
+    SLICE_X36Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.784 r  Driver_PWM0/Period_Cnt_reg[16]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.784    Driver_PWM0/Period_Cnt_reg[16]_i_2_n_0
+    SLICE_X36Y41         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.118 r  Driver_PWM0/Period_Cnt_reg[20]_i_2/O[1]
+                         net (fo=1, routed)           1.296     9.414    Driver_PWM0/Period_Cnt0[18]
+    SLICE_X39Y38         LUT2 (Prop_lut2_I0_O)        0.303     9.717 r  Driver_PWM0/Period_Cnt[18]_i_1/O
+                         net (fo=1, routed)           0.000     9.717    Driver_PWM0/Period_Cnt[18]_i_1_n_0
+    SLICE_X39Y38         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[18]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    H4                                                0.000    10.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000    10.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         1.361    11.361 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.886    13.247    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.338 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          1.577    14.915    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X39Y38         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[18]/C
+                         clock pessimism              0.275    15.190    
+                         clock uncertainty           -0.035    15.155    
+    SLICE_X39Y38         FDRE (Setup_fdre_C_D)        0.031    15.186    Driver_PWM0/Period_Cnt_reg[18]
+  -------------------------------------------------------------------
+                         required time                         15.186    
+                         arrival time                          -9.717    
+  -------------------------------------------------------------------
+                         slack                                  5.468    
+
+Slack (MET) :             5.490ns  (required time - arrival time)
+  Source:                 Driver_PWM0/Period_Cnt_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Driver_PWM0/Period_Cnt_reg[20]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.479ns  (logic 2.073ns (46.278%)  route 2.406ns (53.722%))
+  Logic Levels:           6  (CARRY4=5 LUT2=1)
+  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.915ns = ( 14.915 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.216ns
+    Clock Pessimism Removal (CPR):    0.275ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         1.431     1.431 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.990     3.421    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.517 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          1.699     5.216    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y40         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y40         FDRE (Prop_fdre_C_Q)         0.456     5.672 r  Driver_PWM0/Period_Cnt_reg[1]/Q
+                         net (fo=5, routed)           1.114     6.786    Driver_PWM0/Period_Cnt[1]
+    SLICE_X36Y37         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.656     7.442 r  Driver_PWM0/Period_Cnt_reg[4]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.442    Driver_PWM0/Period_Cnt_reg[4]_i_2_n_0
+    SLICE_X36Y38         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.556 r  Driver_PWM0/Period_Cnt_reg[8]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.556    Driver_PWM0/Period_Cnt_reg[8]_i_2_n_0
+    SLICE_X36Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.670 r  Driver_PWM0/Period_Cnt_reg[12]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.670    Driver_PWM0/Period_Cnt_reg[12]_i_2_n_0
+    SLICE_X36Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.784 r  Driver_PWM0/Period_Cnt_reg[16]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.784    Driver_PWM0/Period_Cnt_reg[16]_i_2_n_0
+    SLICE_X36Y41         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     8.097 r  Driver_PWM0/Period_Cnt_reg[20]_i_2/O[3]
+                         net (fo=1, routed)           1.293     9.389    Driver_PWM0/Period_Cnt0[20]
+    SLICE_X39Y38         LUT2 (Prop_lut2_I0_O)        0.306     9.695 r  Driver_PWM0/Period_Cnt[20]_i_1/O
+                         net (fo=1, routed)           0.000     9.695    Driver_PWM0/Period_Cnt[20]_i_1_n_0
+    SLICE_X39Y38         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[20]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    H4                                                0.000    10.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000    10.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         1.361    11.361 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.886    13.247    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.338 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          1.577    14.915    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X39Y38         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[20]/C
+                         clock pessimism              0.275    15.190    
+                         clock uncertainty           -0.035    15.155    
+    SLICE_X39Y38         FDRE (Setup_fdre_C_D)        0.031    15.186    Driver_PWM0/Period_Cnt_reg[20]
+  -------------------------------------------------------------------
+                         required time                         15.186    
+                         arrival time                          -9.695    
+  -------------------------------------------------------------------
+                         slack                                  5.490    
+
+Slack (MET) :             5.646ns  (required time - arrival time)
+  Source:                 Driver_PWM0/Period_Cnt_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Driver_PWM0/Period_Cnt_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.320ns  (logic 1.573ns (36.409%)  route 2.747ns (63.591%))
+  Logic Levels:           6  (CARRY4=4 LUT2=2)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.915ns = ( 14.915 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.217ns
+    Clock Pessimism Removal (CPR):    0.275ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         1.431     1.431 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.990     3.421    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.517 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          1.700     5.217    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y41         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y41         FDRE (Prop_fdre_C_Q)         0.419     5.636 r  Driver_PWM0/Period_Cnt_reg[5]/Q
+                         net (fo=5, routed)           1.260     6.896    Driver_PWM0/Period_Cnt[5]
+    SLICE_X38Y38         LUT2 (Prop_lut2_I0_O)        0.299     7.195 r  Driver_PWM0/Period_Cnt1_carry_i_6/O
+                         net (fo=1, routed)           0.000     7.195    Driver_PWM0/Period_Cnt1_carry_i_6_n_0
+    SLICE_X38Y38         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     7.575 r  Driver_PWM0/Period_Cnt1_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.575    Driver_PWM0/Period_Cnt1_carry_n_0
+    SLICE_X38Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.692 r  Driver_PWM0/Period_Cnt1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.692    Driver_PWM0/Period_Cnt1_carry__0_n_0
+    SLICE_X38Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.809 r  Driver_PWM0/Period_Cnt1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.809    Driver_PWM0/Period_Cnt1_carry__1_n_0
+    SLICE_X38Y41         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.926 r  Driver_PWM0/Period_Cnt1_carry__2/CO[3]
+                         net (fo=32, routed)          1.487     9.413    Driver_PWM0/Period_Cnt1
+    SLICE_X39Y38         LUT2 (Prop_lut2_I0_O)        0.124     9.537 r  Driver_PWM0/Period_Cnt[0]_i_1/O
+                         net (fo=1, routed)           0.000     9.537    Driver_PWM0/Period_Cnt[0]_i_1_n_0
+    SLICE_X39Y38         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    H4                                                0.000    10.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000    10.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         1.361    11.361 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.886    13.247    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.338 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          1.577    14.915    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X39Y38         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[0]/C
+                         clock pessimism              0.275    15.190    
+                         clock uncertainty           -0.035    15.155    
+    SLICE_X39Y38         FDRE (Setup_fdre_C_D)        0.029    15.184    Driver_PWM0/Period_Cnt_reg[0]
+  -------------------------------------------------------------------
+                         required time                         15.184    
+                         arrival time                          -9.537    
+  -------------------------------------------------------------------
+                         slack                                  5.646    
+
+Slack (MET) :             5.662ns  (required time - arrival time)
+  Source:                 Driver_PWM0/Period_Cnt_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Driver_PWM0/Period_Cnt_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.350ns  (logic 1.601ns (36.802%)  route 2.749ns (63.198%))
+  Logic Levels:           6  (CARRY4=4 LUT2=2)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.915ns = ( 14.915 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.217ns
+    Clock Pessimism Removal (CPR):    0.275ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         1.431     1.431 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.990     3.421    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.517 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          1.700     5.217    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y41         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y41         FDRE (Prop_fdre_C_Q)         0.419     5.636 r  Driver_PWM0/Period_Cnt_reg[5]/Q
+                         net (fo=5, routed)           1.260     6.896    Driver_PWM0/Period_Cnt[5]
+    SLICE_X38Y38         LUT2 (Prop_lut2_I0_O)        0.299     7.195 r  Driver_PWM0/Period_Cnt1_carry_i_6/O
+                         net (fo=1, routed)           0.000     7.195    Driver_PWM0/Period_Cnt1_carry_i_6_n_0
+    SLICE_X38Y38         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     7.575 r  Driver_PWM0/Period_Cnt1_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.575    Driver_PWM0/Period_Cnt1_carry_n_0
+    SLICE_X38Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.692 r  Driver_PWM0/Period_Cnt1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.692    Driver_PWM0/Period_Cnt1_carry__0_n_0
+    SLICE_X38Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.809 r  Driver_PWM0/Period_Cnt1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.809    Driver_PWM0/Period_Cnt1_carry__1_n_0
+    SLICE_X38Y41         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.926 r  Driver_PWM0/Period_Cnt1_carry__2/CO[3]
+                         net (fo=32, routed)          1.489     9.415    Driver_PWM0/Period_Cnt1
+    SLICE_X39Y38         LUT2 (Prop_lut2_I1_O)        0.152     9.567 r  Driver_PWM0/Period_Cnt[3]_i_1/O
+                         net (fo=1, routed)           0.000     9.567    Driver_PWM0/Period_Cnt[3]_i_1_n_0
+    SLICE_X39Y38         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    H4                                                0.000    10.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000    10.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         1.361    11.361 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.886    13.247    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.338 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          1.577    14.915    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X39Y38         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[3]/C
+                         clock pessimism              0.275    15.190    
+                         clock uncertainty           -0.035    15.155    
+    SLICE_X39Y38         FDRE (Setup_fdre_C_D)        0.075    15.230    Driver_PWM0/Period_Cnt_reg[3]
+  -------------------------------------------------------------------
+                         required time                         15.230    
+                         arrival time                          -9.567    
+  -------------------------------------------------------------------
+                         slack                                  5.662    
+
+Slack (MET) :             5.664ns  (required time - arrival time)
+  Source:                 Driver_PWM0/Period_Cnt_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Driver_PWM0/Period_Cnt_reg[11]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.348ns  (logic 1.601ns (36.819%)  route 2.747ns (63.181%))
+  Logic Levels:           6  (CARRY4=4 LUT2=2)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.915ns = ( 14.915 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.217ns
+    Clock Pessimism Removal (CPR):    0.275ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         1.431     1.431 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.990     3.421    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.517 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          1.700     5.217    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y41         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y41         FDRE (Prop_fdre_C_Q)         0.419     5.636 r  Driver_PWM0/Period_Cnt_reg[5]/Q
+                         net (fo=5, routed)           1.260     6.896    Driver_PWM0/Period_Cnt[5]
+    SLICE_X38Y38         LUT2 (Prop_lut2_I0_O)        0.299     7.195 r  Driver_PWM0/Period_Cnt1_carry_i_6/O
+                         net (fo=1, routed)           0.000     7.195    Driver_PWM0/Period_Cnt1_carry_i_6_n_0
+    SLICE_X38Y38         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     7.575 r  Driver_PWM0/Period_Cnt1_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.575    Driver_PWM0/Period_Cnt1_carry_n_0
+    SLICE_X38Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.692 r  Driver_PWM0/Period_Cnt1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.692    Driver_PWM0/Period_Cnt1_carry__0_n_0
+    SLICE_X38Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.809 r  Driver_PWM0/Period_Cnt1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.809    Driver_PWM0/Period_Cnt1_carry__1_n_0
+    SLICE_X38Y41         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.926 r  Driver_PWM0/Period_Cnt1_carry__2/CO[3]
+                         net (fo=32, routed)          1.487     9.413    Driver_PWM0/Period_Cnt1
+    SLICE_X39Y38         LUT2 (Prop_lut2_I1_O)        0.152     9.565 r  Driver_PWM0/Period_Cnt[11]_i_1/O
+                         net (fo=1, routed)           0.000     9.565    Driver_PWM0/Period_Cnt[11]_i_1_n_0
+    SLICE_X39Y38         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    H4                                                0.000    10.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000    10.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         1.361    11.361 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.886    13.247    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.338 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          1.577    14.915    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X39Y38         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[11]/C
+                         clock pessimism              0.275    15.190    
+                         clock uncertainty           -0.035    15.155    
+    SLICE_X39Y38         FDRE (Setup_fdre_C_D)        0.075    15.230    Driver_PWM0/Period_Cnt_reg[11]
+  -------------------------------------------------------------------
+                         required time                         15.230    
+                         arrival time                          -9.565    
+  -------------------------------------------------------------------
+                         slack                                  5.664    
+
+Slack (MET) :             5.712ns  (required time - arrival time)
+  Source:                 Driver_PWM0/Period_Cnt_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Driver_PWM0/Period_Cnt_reg[25]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.303ns  (logic 2.231ns (51.846%)  route 2.072ns (48.154%))
+  Logic Levels:           8  (CARRY4=7 LUT2=1)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns = ( 14.916 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.216ns
+    Clock Pessimism Removal (CPR):    0.275ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         1.431     1.431 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.990     3.421    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.517 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          1.699     5.216    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y40         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y40         FDRE (Prop_fdre_C_Q)         0.456     5.672 r  Driver_PWM0/Period_Cnt_reg[1]/Q
+                         net (fo=5, routed)           1.114     6.786    Driver_PWM0/Period_Cnt[1]
+    SLICE_X36Y37         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.656     7.442 r  Driver_PWM0/Period_Cnt_reg[4]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.442    Driver_PWM0/Period_Cnt_reg[4]_i_2_n_0
+    SLICE_X36Y38         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.556 r  Driver_PWM0/Period_Cnt_reg[8]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.556    Driver_PWM0/Period_Cnt_reg[8]_i_2_n_0
+    SLICE_X36Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.670 r  Driver_PWM0/Period_Cnt_reg[12]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.670    Driver_PWM0/Period_Cnt_reg[12]_i_2_n_0
+    SLICE_X36Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.784 r  Driver_PWM0/Period_Cnt_reg[16]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.784    Driver_PWM0/Period_Cnt_reg[16]_i_2_n_0
+    SLICE_X36Y41         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.898 r  Driver_PWM0/Period_Cnt_reg[20]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.898    Driver_PWM0/Period_Cnt_reg[20]_i_2_n_0
+    SLICE_X36Y42         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.012 r  Driver_PWM0/Period_Cnt_reg[24]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.012    Driver_PWM0/Period_Cnt_reg[24]_i_2_n_0
+    SLICE_X36Y43         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     8.234 r  Driver_PWM0/Period_Cnt_reg[28]_i_2/O[0]
+                         net (fo=1, routed)           0.958     9.192    Driver_PWM0/Period_Cnt0[25]
+    SLICE_X39Y40         LUT2 (Prop_lut2_I0_O)        0.327     9.519 r  Driver_PWM0/Period_Cnt[25]_i_1/O
+                         net (fo=1, routed)           0.000     9.519    Driver_PWM0/Period_Cnt[25]_i_1_n_0
+    SLICE_X39Y40         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[25]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    H4                                                0.000    10.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000    10.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         1.361    11.361 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.886    13.247    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.338 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          1.578    14.916    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X39Y40         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[25]/C
+                         clock pessimism              0.275    15.191    
+                         clock uncertainty           -0.035    15.156    
+    SLICE_X39Y40         FDRE (Setup_fdre_C_D)        0.075    15.231    Driver_PWM0/Period_Cnt_reg[25]
+  -------------------------------------------------------------------
+                         required time                         15.231    
+                         arrival time                          -9.519    
+  -------------------------------------------------------------------
+                         slack                                  5.712    
+
+Slack (MET) :             5.729ns  (required time - arrival time)
+  Source:                 Driver_PWM0/Period_Cnt_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Driver_PWM0/Period_Cnt_reg[27]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.311ns  (logic 2.251ns (52.219%)  route 2.060ns (47.781%))
+  Logic Levels:           8  (CARRY4=7 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns = ( 14.916 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.216ns
+    Clock Pessimism Removal (CPR):    0.300ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         1.431     1.431 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.990     3.421    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.517 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          1.699     5.216    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y40         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y40         FDRE (Prop_fdre_C_Q)         0.456     5.672 r  Driver_PWM0/Period_Cnt_reg[1]/Q
+                         net (fo=5, routed)           1.114     6.786    Driver_PWM0/Period_Cnt[1]
+    SLICE_X36Y37         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.656     7.442 r  Driver_PWM0/Period_Cnt_reg[4]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.442    Driver_PWM0/Period_Cnt_reg[4]_i_2_n_0
+    SLICE_X36Y38         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.556 r  Driver_PWM0/Period_Cnt_reg[8]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.556    Driver_PWM0/Period_Cnt_reg[8]_i_2_n_0
+    SLICE_X36Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.670 r  Driver_PWM0/Period_Cnt_reg[12]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.670    Driver_PWM0/Period_Cnt_reg[12]_i_2_n_0
+    SLICE_X36Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.784 r  Driver_PWM0/Period_Cnt_reg[16]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.784    Driver_PWM0/Period_Cnt_reg[16]_i_2_n_0
+    SLICE_X36Y41         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.898 r  Driver_PWM0/Period_Cnt_reg[20]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.898    Driver_PWM0/Period_Cnt_reg[20]_i_2_n_0
+    SLICE_X36Y42         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.012 r  Driver_PWM0/Period_Cnt_reg[24]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.012    Driver_PWM0/Period_Cnt_reg[24]_i_2_n_0
+    SLICE_X36Y43         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     8.251 r  Driver_PWM0/Period_Cnt_reg[28]_i_2/O[2]
+                         net (fo=1, routed)           0.946     9.197    Driver_PWM0/Period_Cnt0[27]
+    SLICE_X37Y40         LUT2 (Prop_lut2_I0_O)        0.330     9.527 r  Driver_PWM0/Period_Cnt[27]_i_1/O
+                         net (fo=1, routed)           0.000     9.527    Driver_PWM0/Period_Cnt[27]_i_1_n_0
+    SLICE_X37Y40         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[27]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    H4                                                0.000    10.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000    10.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         1.361    11.361 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.886    13.247    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.338 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          1.578    14.916    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y40         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[27]/C
+                         clock pessimism              0.300    15.216    
+                         clock uncertainty           -0.035    15.181    
+    SLICE_X37Y40         FDRE (Setup_fdre_C_D)        0.075    15.256    Driver_PWM0/Period_Cnt_reg[27]
+  -------------------------------------------------------------------
+                         required time                         15.256    
+                         arrival time                          -9.527    
+  -------------------------------------------------------------------
+                         slack                                  5.729    
+
+Slack (MET) :             5.747ns  (required time - arrival time)
+  Source:                 Driver_PWM0/Period_Cnt_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Driver_PWM0/Period_Cnt_reg[29]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.269ns  (logic 2.345ns (54.931%)  route 1.924ns (45.069%))
+  Logic Levels:           9  (CARRY4=8 LUT2=1)
+  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.917ns = ( 14.917 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.216ns
+    Clock Pessimism Removal (CPR):    0.275ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         1.431     1.431 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.990     3.421    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.517 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          1.699     5.216    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y40         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y40         FDRE (Prop_fdre_C_Q)         0.456     5.672 r  Driver_PWM0/Period_Cnt_reg[1]/Q
+                         net (fo=5, routed)           1.114     6.786    Driver_PWM0/Period_Cnt[1]
+    SLICE_X36Y37         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.656     7.442 r  Driver_PWM0/Period_Cnt_reg[4]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.442    Driver_PWM0/Period_Cnt_reg[4]_i_2_n_0
+    SLICE_X36Y38         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.556 r  Driver_PWM0/Period_Cnt_reg[8]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.556    Driver_PWM0/Period_Cnt_reg[8]_i_2_n_0
+    SLICE_X36Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.670 r  Driver_PWM0/Period_Cnt_reg[12]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.670    Driver_PWM0/Period_Cnt_reg[12]_i_2_n_0
+    SLICE_X36Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.784 r  Driver_PWM0/Period_Cnt_reg[16]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.784    Driver_PWM0/Period_Cnt_reg[16]_i_2_n_0
+    SLICE_X36Y41         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.898 r  Driver_PWM0/Period_Cnt_reg[20]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.898    Driver_PWM0/Period_Cnt_reg[20]_i_2_n_0
+    SLICE_X36Y42         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.012 r  Driver_PWM0/Period_Cnt_reg[24]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.012    Driver_PWM0/Period_Cnt_reg[24]_i_2_n_0
+    SLICE_X36Y43         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.126 r  Driver_PWM0/Period_Cnt_reg[28]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.126    Driver_PWM0/Period_Cnt_reg[28]_i_2_n_0
+    SLICE_X36Y44         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     8.348 r  Driver_PWM0/Period_Cnt_reg[31]_i_2/O[0]
+                         net (fo=1, routed)           0.810     9.158    Driver_PWM0/Period_Cnt0[29]
+    SLICE_X37Y42         LUT2 (Prop_lut2_I0_O)        0.327     9.485 r  Driver_PWM0/Period_Cnt[29]_i_1/O
+                         net (fo=1, routed)           0.000     9.485    Driver_PWM0/Period_Cnt[29]_i_1_n_0
+    SLICE_X37Y42         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    H4                                                0.000    10.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000    10.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         1.361    11.361 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.886    13.247    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.338 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          1.579    14.917    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y42         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[29]/C
+                         clock pessimism              0.275    15.192    
+                         clock uncertainty           -0.035    15.157    
+    SLICE_X37Y42         FDRE (Setup_fdre_C_D)        0.075    15.232    Driver_PWM0/Period_Cnt_reg[29]
+  -------------------------------------------------------------------
+                         required time                         15.232    
+                         arrival time                          -9.485    
+  -------------------------------------------------------------------
+                         slack                                  5.747    
+
+Slack (MET) :             5.758ns  (required time - arrival time)
+  Source:                 Driver_PWM0/Period_Cnt_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Driver_PWM0/Period_Cnt_reg[31]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.211ns  (logic 2.337ns (55.496%)  route 1.874ns (44.504%))
+  Logic Levels:           9  (CARRY4=8 LUT2=1)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns = ( 14.916 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.216ns
+    Clock Pessimism Removal (CPR):    0.275ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         1.431     1.431 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.990     3.421    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.517 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          1.699     5.216    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y40         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y40         FDRE (Prop_fdre_C_Q)         0.456     5.672 r  Driver_PWM0/Period_Cnt_reg[1]/Q
+                         net (fo=5, routed)           1.114     6.786    Driver_PWM0/Period_Cnt[1]
+    SLICE_X36Y37         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.656     7.442 r  Driver_PWM0/Period_Cnt_reg[4]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.442    Driver_PWM0/Period_Cnt_reg[4]_i_2_n_0
+    SLICE_X36Y38         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.556 r  Driver_PWM0/Period_Cnt_reg[8]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.556    Driver_PWM0/Period_Cnt_reg[8]_i_2_n_0
+    SLICE_X36Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.670 r  Driver_PWM0/Period_Cnt_reg[12]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.670    Driver_PWM0/Period_Cnt_reg[12]_i_2_n_0
+    SLICE_X36Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.784 r  Driver_PWM0/Period_Cnt_reg[16]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.784    Driver_PWM0/Period_Cnt_reg[16]_i_2_n_0
+    SLICE_X36Y41         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.898 r  Driver_PWM0/Period_Cnt_reg[20]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     7.898    Driver_PWM0/Period_Cnt_reg[20]_i_2_n_0
+    SLICE_X36Y42         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.012 r  Driver_PWM0/Period_Cnt_reg[24]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.012    Driver_PWM0/Period_Cnt_reg[24]_i_2_n_0
+    SLICE_X36Y43         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.126 r  Driver_PWM0/Period_Cnt_reg[28]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.126    Driver_PWM0/Period_Cnt_reg[28]_i_2_n_0
+    SLICE_X36Y44         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     8.365 r  Driver_PWM0/Period_Cnt_reg[31]_i_2/O[2]
+                         net (fo=1, routed)           0.760     9.125    Driver_PWM0/Period_Cnt0[31]
+    SLICE_X39Y39         LUT2 (Prop_lut2_I0_O)        0.302     9.427 r  Driver_PWM0/Period_Cnt[31]_i_1/O
+                         net (fo=1, routed)           0.000     9.427    Driver_PWM0/Period_Cnt[31]_i_1_n_0
+    SLICE_X39Y39         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    H4                                                0.000    10.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000    10.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         1.361    11.361 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           1.886    13.247    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.338 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          1.578    14.916    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X39Y39         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[31]/C
+                         clock pessimism              0.275    15.191    
+                         clock uncertainty           -0.035    15.156    
+    SLICE_X39Y39         FDRE (Setup_fdre_C_D)        0.029    15.185    Driver_PWM0/Period_Cnt_reg[31]
+  -------------------------------------------------------------------
+                         required time                         15.185    
+                         arrival time                          -9.427    
+  -------------------------------------------------------------------
+                         slack                                  5.758    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.287ns  (arrival time - required time)
+  Source:                 Driver_PWM0/Period_Cnt_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Driver_PWM0/Period_Cnt_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.378ns  (logic 0.186ns (49.258%)  route 0.192ns (50.742%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.961ns
+    Source Clock Delay      (SCD):    1.446ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         0.199     0.199 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.630     0.830    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.856 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          0.591     1.446    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X39Y38         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y38         FDRE (Prop_fdre_C_Q)         0.141     1.587 f  Driver_PWM0/Period_Cnt_reg[0]/Q
+                         net (fo=6, routed)           0.192     1.779    Driver_PWM0/Period_Cnt[0]
+    SLICE_X39Y38         LUT2 (Prop_lut2_I1_O)        0.045     1.824 r  Driver_PWM0/Period_Cnt[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.824    Driver_PWM0/Period_Cnt[0]_i_1_n_0
+    SLICE_X39Y38         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         0.387     0.387 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.684     1.070    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.099 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          0.862     1.961    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X39Y38         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[0]/C
+                         clock pessimism             -0.515     1.446    
+    SLICE_X39Y38         FDRE (Hold_fdre_C_D)         0.091     1.537    Driver_PWM0/Period_Cnt_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.537    
+                         arrival time                           1.824    
+  -------------------------------------------------------------------
+                         slack                                  0.287    
+
+Slack (MET) :             0.365ns  (arrival time - required time)
+  Source:                 Driver_PWM0/Period_Cnt_reg[30]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Driver_PWM0/PWM_reg/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.428ns  (logic 0.301ns (70.279%)  route 0.127ns (29.721%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.037ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.961ns
+    Source Clock Delay      (SCD):    1.446ns
+    Clock Pessimism Removal (CPR):    0.478ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         0.199     0.199 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.630     0.830    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.856 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          0.591     1.446    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X35Y39         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[30]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X35Y39         FDRE (Prop_fdre_C_Q)         0.141     1.587 f  Driver_PWM0/Period_Cnt_reg[30]/Q
+                         net (fo=3, routed)           0.127     1.714    Driver_PWM0/Period_Cnt[30]
+    SLICE_X37Y39         LUT2 (Prop_lut2_I0_O)        0.045     1.759 r  Driver_PWM0/PWM0_carry__2_i_2/O
+                         net (fo=1, routed)           0.000     1.759    Driver_PWM0/PWM0_carry__2_i_2_n_0
+    SLICE_X37Y39         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.115     1.874 r  Driver_PWM0/PWM0_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     1.874    Driver_PWM0/PWM0_carry__2_n_0
+    SLICE_X37Y39         FDRE                                         r  Driver_PWM0/PWM_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         0.387     0.387 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.684     1.070    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.099 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          0.862     1.961    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y39         FDRE                                         r  Driver_PWM0/PWM_reg/C
+                         clock pessimism             -0.478     1.483    
+    SLICE_X37Y39         FDRE (Hold_fdre_C_D)         0.026     1.509    Driver_PWM0/PWM_reg
+  -------------------------------------------------------------------
+                         required time                         -1.509    
+                         arrival time                           1.874    
+  -------------------------------------------------------------------
+                         slack                                  0.365    
+
+Slack (MET) :             0.538ns  (arrival time - required time)
+  Source:                 Driver_PWM0/Period_Cnt_reg[19]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Driver_PWM0/Period_Cnt_reg[19]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.630ns  (logic 0.360ns (57.110%)  route 0.270ns (42.890%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.962ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         0.199     0.199 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.630     0.830    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.856 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          0.592     1.447    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y41         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y41         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  Driver_PWM0/Period_Cnt_reg[19]/Q
+                         net (fo=4, routed)           0.131     1.719    Driver_PWM0/Period_Cnt[19]
+    SLICE_X36Y41         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.111     1.830 r  Driver_PWM0/Period_Cnt_reg[20]_i_2/O[2]
+                         net (fo=1, routed)           0.140     1.969    Driver_PWM0/Period_Cnt0[19]
+    SLICE_X37Y41         LUT2 (Prop_lut2_I0_O)        0.108     2.077 r  Driver_PWM0/Period_Cnt[19]_i_1/O
+                         net (fo=1, routed)           0.000     2.077    Driver_PWM0/Period_Cnt[19]_i_1_n_0
+    SLICE_X37Y41         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         0.387     0.387 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.684     1.070    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.099 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          0.863     1.962    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y41         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[19]/C
+                         clock pessimism             -0.515     1.447    
+    SLICE_X37Y41         FDRE (Hold_fdre_C_D)         0.092     1.539    Driver_PWM0/Period_Cnt_reg[19]
+  -------------------------------------------------------------------
+                         required time                         -1.539    
+                         arrival time                           2.077    
+  -------------------------------------------------------------------
+                         slack                                  0.538    
+
+Slack (MET) :             0.554ns  (arrival time - required time)
+  Source:                 Driver_PWM0/Period_Cnt_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Driver_PWM0/Period_Cnt_reg[14]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.646ns  (logic 0.358ns (55.438%)  route 0.288ns (44.562%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.962ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         0.199     0.199 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.630     0.830    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.856 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          0.592     1.447    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y41         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y41         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  Driver_PWM0/Period_Cnt_reg[14]/Q
+                         net (fo=4, routed)           0.141     1.729    Driver_PWM0/Period_Cnt[14]
+    SLICE_X36Y40         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.110     1.839 r  Driver_PWM0/Period_Cnt_reg[16]_i_2/O[1]
+                         net (fo=1, routed)           0.146     1.986    Driver_PWM0/Period_Cnt0[14]
+    SLICE_X37Y41         LUT2 (Prop_lut2_I0_O)        0.107     2.093 r  Driver_PWM0/Period_Cnt[14]_i_1/O
+                         net (fo=1, routed)           0.000     2.093    Driver_PWM0/Period_Cnt[14]_i_1_n_0
+    SLICE_X37Y41         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         0.387     0.387 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.684     1.070    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.099 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          0.863     1.962    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y41         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[14]/C
+                         clock pessimism             -0.515     1.447    
+    SLICE_X37Y41         FDRE (Hold_fdre_C_D)         0.092     1.539    Driver_PWM0/Period_Cnt_reg[14]
+  -------------------------------------------------------------------
+                         required time                         -1.539    
+                         arrival time                           2.093    
+  -------------------------------------------------------------------
+                         slack                                  0.554    
+
+Slack (MET) :             0.565ns  (arrival time - required time)
+  Source:                 Driver_PWM0/Period_Cnt_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Driver_PWM0/Period_Cnt_reg[11]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.672ns  (logic 0.404ns (60.156%)  route 0.268ns (39.844%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.961ns
+    Source Clock Delay      (SCD):    1.446ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         0.199     0.199 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.630     0.830    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.856 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          0.591     1.446    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X39Y38         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y38         FDRE (Prop_fdre_C_Q)         0.128     1.574 r  Driver_PWM0/Period_Cnt_reg[11]/Q
+                         net (fo=4, routed)           0.139     1.713    Driver_PWM0/Period_Cnt[11]
+    SLICE_X36Y39         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.165     1.878 r  Driver_PWM0/Period_Cnt_reg[12]_i_2/O[2]
+                         net (fo=1, routed)           0.129     2.007    Driver_PWM0/Period_Cnt0[11]
+    SLICE_X39Y38         LUT2 (Prop_lut2_I0_O)        0.111     2.118 r  Driver_PWM0/Period_Cnt[11]_i_1/O
+                         net (fo=1, routed)           0.000     2.118    Driver_PWM0/Period_Cnt[11]_i_1_n_0
+    SLICE_X39Y38         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         0.387     0.387 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.684     1.070    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.099 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          0.862     1.961    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X39Y38         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[11]/C
+                         clock pessimism             -0.515     1.446    
+    SLICE_X39Y38         FDRE (Hold_fdre_C_D)         0.107     1.553    Driver_PWM0/Period_Cnt_reg[11]
+  -------------------------------------------------------------------
+                         required time                         -1.553    
+                         arrival time                           2.118    
+  -------------------------------------------------------------------
+                         slack                                  0.565    
+
+Slack (MET) :             0.576ns  (arrival time - required time)
+  Source:                 Driver_PWM0/Period_Cnt_reg[16]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Driver_PWM0/Period_Cnt_reg[16]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.668ns  (logic 0.359ns (53.775%)  route 0.309ns (46.225%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.962ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         0.199     0.199 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.630     0.830    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.856 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          0.592     1.447    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y40         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[16]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y40         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  Driver_PWM0/Period_Cnt_reg[16]/Q
+                         net (fo=4, routed)           0.084     1.672    Driver_PWM0/Period_Cnt[16]
+    SLICE_X36Y40         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     1.780 r  Driver_PWM0/Period_Cnt_reg[16]_i_2/O[3]
+                         net (fo=1, routed)           0.225     2.005    Driver_PWM0/Period_Cnt0[16]
+    SLICE_X37Y40         LUT2 (Prop_lut2_I0_O)        0.110     2.115 r  Driver_PWM0/Period_Cnt[16]_i_1/O
+                         net (fo=1, routed)           0.000     2.115    Driver_PWM0/Period_Cnt[16]_i_1_n_0
+    SLICE_X37Y40         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         0.387     0.387 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.684     1.070    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.099 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          0.863     1.962    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y40         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[16]/C
+                         clock pessimism             -0.515     1.447    
+    SLICE_X37Y40         FDRE (Hold_fdre_C_D)         0.092     1.539    Driver_PWM0/Period_Cnt_reg[16]
+  -------------------------------------------------------------------
+                         required time                         -1.539    
+                         arrival time                           2.115    
+  -------------------------------------------------------------------
+                         slack                                  0.576    
+
+Slack (MET) :             0.599ns  (arrival time - required time)
+  Source:                 Driver_PWM0/Period_Cnt_reg[17]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Driver_PWM0/Period_Cnt_reg[17]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.690ns  (logic 0.363ns (52.598%)  route 0.327ns (47.402%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.962ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         0.199     0.199 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.630     0.830    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.856 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          0.592     1.447    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y42         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[17]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y42         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  Driver_PWM0/Period_Cnt_reg[17]/Q
+                         net (fo=4, routed)           0.134     1.722    Driver_PWM0/Period_Cnt[17]
+    SLICE_X36Y41         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     1.837 r  Driver_PWM0/Period_Cnt_reg[20]_i_2/O[0]
+                         net (fo=1, routed)           0.193     2.030    Driver_PWM0/Period_Cnt0[17]
+    SLICE_X37Y42         LUT2 (Prop_lut2_I0_O)        0.107     2.137 r  Driver_PWM0/Period_Cnt[17]_i_1/O
+                         net (fo=1, routed)           0.000     2.137    Driver_PWM0/Period_Cnt[17]_i_1_n_0
+    SLICE_X37Y42         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         0.387     0.387 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.684     1.070    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.099 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          0.863     1.962    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y42         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[17]/C
+                         clock pessimism             -0.515     1.447    
+    SLICE_X37Y42         FDRE (Hold_fdre_C_D)         0.091     1.538    Driver_PWM0/Period_Cnt_reg[17]
+  -------------------------------------------------------------------
+                         required time                         -1.538    
+                         arrival time                           2.137    
+  -------------------------------------------------------------------
+                         slack                                  0.599    
+
+Slack (MET) :             0.613ns  (arrival time - required time)
+  Source:                 Driver_PWM0/Period_Cnt_reg[15]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Driver_PWM0/Period_Cnt_reg[15]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.704ns  (logic 0.360ns (51.132%)  route 0.344ns (48.868%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.962ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         0.199     0.199 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.630     0.830    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.856 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          0.592     1.447    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y40         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[15]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y40         FDRE (Prop_fdre_C_Q)         0.141     1.588 r  Driver_PWM0/Period_Cnt_reg[15]/Q
+                         net (fo=4, routed)           0.185     1.773    Driver_PWM0/Period_Cnt[15]
+    SLICE_X36Y40         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.111     1.884 r  Driver_PWM0/Period_Cnt_reg[16]_i_2/O[2]
+                         net (fo=1, routed)           0.159     2.043    Driver_PWM0/Period_Cnt0[15]
+    SLICE_X37Y40         LUT2 (Prop_lut2_I0_O)        0.108     2.151 r  Driver_PWM0/Period_Cnt[15]_i_1/O
+                         net (fo=1, routed)           0.000     2.151    Driver_PWM0/Period_Cnt[15]_i_1_n_0
+    SLICE_X37Y40         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         0.387     0.387 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.684     1.070    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.099 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          0.863     1.962    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y40         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[15]/C
+                         clock pessimism             -0.515     1.447    
+    SLICE_X37Y40         FDRE (Hold_fdre_C_D)         0.091     1.538    Driver_PWM0/Period_Cnt_reg[15]
+  -------------------------------------------------------------------
+                         required time                         -1.538    
+                         arrival time                           2.151    
+  -------------------------------------------------------------------
+                         slack                                  0.613    
+
+Slack (MET) :             0.636ns  (arrival time - required time)
+  Source:                 Driver_PWM0/Period_Cnt_reg[24]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Driver_PWM0/Period_Cnt_reg[24]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.743ns  (logic 0.399ns (53.686%)  route 0.344ns (46.314%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.962ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         0.199     0.199 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.630     0.830    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.856 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          0.592     1.447    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y41         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[24]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y41         FDRE (Prop_fdre_C_Q)         0.128     1.575 r  Driver_PWM0/Period_Cnt_reg[24]/Q
+                         net (fo=4, routed)           0.149     1.724    Driver_PWM0/Period_Cnt[24]
+    SLICE_X36Y42         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.161     1.885 r  Driver_PWM0/Period_Cnt_reg[24]_i_2/O[3]
+                         net (fo=1, routed)           0.195     2.080    Driver_PWM0/Period_Cnt0[24]
+    SLICE_X37Y41         LUT2 (Prop_lut2_I0_O)        0.110     2.190 r  Driver_PWM0/Period_Cnt[24]_i_1/O
+                         net (fo=1, routed)           0.000     2.190    Driver_PWM0/Period_Cnt[24]_i_1_n_0
+    SLICE_X37Y41         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         0.387     0.387 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.684     1.070    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.099 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          0.863     1.962    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y41         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[24]/C
+                         clock pessimism             -0.515     1.447    
+    SLICE_X37Y41         FDRE (Hold_fdre_C_D)         0.107     1.554    Driver_PWM0/Period_Cnt_reg[24]
+  -------------------------------------------------------------------
+                         required time                         -1.554    
+                         arrival time                           2.190    
+  -------------------------------------------------------------------
+                         slack                                  0.636    
+
+Slack (MET) :             0.638ns  (arrival time - required time)
+  Source:                 Driver_PWM0/Period_Cnt_reg[21]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Driver_PWM0/Period_Cnt_reg[29]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.761ns  (logic 0.385ns (50.591%)  route 0.376ns (49.409%))
+  Logic Levels:           4  (CARRY4=2 LUT2=2)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.962ns
+    Source Clock Delay      (SCD):    1.447ns
+    Clock Pessimism Removal (CPR):    0.499ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         0.199     0.199 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.630     0.830    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.856 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          0.592     1.447    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y40         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[21]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y40         FDRE (Prop_fdre_C_Q)         0.141     1.588 f  Driver_PWM0/Period_Cnt_reg[21]/Q
+                         net (fo=4, routed)           0.111     1.699    Driver_PWM0/Period_Cnt[21]
+    SLICE_X38Y40         LUT2 (Prop_lut2_I1_O)        0.045     1.744 r  Driver_PWM0/Period_Cnt1_carry__1_i_2/O
+                         net (fo=1, routed)           0.000     1.744    Driver_PWM0/Period_Cnt1_carry__1_i_2_n_0
+    SLICE_X38Y40         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.111     1.855 r  Driver_PWM0/Period_Cnt1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     1.855    Driver_PWM0/Period_Cnt1_carry__1_n_0
+    SLICE_X38Y41         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.040     1.895 r  Driver_PWM0/Period_Cnt1_carry__2/CO[3]
+                         net (fo=32, routed)          0.265     2.160    Driver_PWM0/Period_Cnt1
+    SLICE_X37Y42         LUT2 (Prop_lut2_I1_O)        0.048     2.208 r  Driver_PWM0/Period_Cnt[29]_i_1/O
+                         net (fo=1, routed)           0.000     2.208    Driver_PWM0/Period_Cnt[29]_i_1_n_0
+    SLICE_X37Y42         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H4                                                0.000     0.000 r  clk_100MHz (IN)
+                         net (fo=0)                   0.000     0.000    clk_100MHz
+    H4                   IBUF (Prop_ibuf_I_O)         0.387     0.387 r  clk_100MHz_IBUF_inst/O
+                         net (fo=1, routed)           0.684     1.070    clk_100MHz_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.099 r  clk_100MHz_IBUF_BUFG_inst/O
+                         net (fo=33, routed)          0.863     1.962    Driver_PWM0/clk_100MHz_IBUF_BUFG
+    SLICE_X37Y42         FDRE                                         r  Driver_PWM0/Period_Cnt_reg[29]/C
+                         clock pessimism             -0.499     1.463    
+    SLICE_X37Y42         FDRE (Hold_fdre_C_D)         0.107     1.570    Driver_PWM0/Period_Cnt_reg[29]
+  -------------------------------------------------------------------
+                         required time                         -1.570    
+                         arrival time                           2.208    
+  -------------------------------------------------------------------
+                         slack                                  0.638    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk_100MHz }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     BUFG/I   n/a            2.155         10.000      7.845      BUFGCTRL_X0Y0  clk_100MHz_IBUF_BUFG_inst/I
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X37Y39   Driver_PWM0/PWM_reg/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X39Y38   Driver_PWM0/Period_Cnt_reg[0]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X37Y41   Driver_PWM0/Period_Cnt_reg[10]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X39Y38   Driver_PWM0/Period_Cnt_reg[11]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X37Y41   Driver_PWM0/Period_Cnt_reg[12]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X39Y40   Driver_PWM0/Period_Cnt_reg[13]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X37Y41   Driver_PWM0/Period_Cnt_reg[14]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X37Y40   Driver_PWM0/Period_Cnt_reg[15]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X37Y40   Driver_PWM0/Period_Cnt_reg[16]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X37Y39   Driver_PWM0/PWM_reg/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X39Y38   Driver_PWM0/Period_Cnt_reg[0]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X39Y38   Driver_PWM0/Period_Cnt_reg[11]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X39Y38   Driver_PWM0/Period_Cnt_reg[18]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X39Y38   Driver_PWM0/Period_Cnt_reg[20]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X35Y39   Driver_PWM0/Period_Cnt_reg[30]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X39Y39   Driver_PWM0/Period_Cnt_reg[31]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X39Y38   Driver_PWM0/Period_Cnt_reg[3]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X39Y38   Driver_PWM0/Period_Cnt_reg[4]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X39Y38   Driver_PWM0/Period_Cnt_reg[6]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X37Y39   Driver_PWM0/PWM_reg/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X39Y38   Driver_PWM0/Period_Cnt_reg[0]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X39Y38   Driver_PWM0/Period_Cnt_reg[11]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X39Y40   Driver_PWM0/Period_Cnt_reg[13]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X37Y40   Driver_PWM0/Period_Cnt_reg[15]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X37Y40   Driver_PWM0/Period_Cnt_reg[16]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X39Y38   Driver_PWM0/Period_Cnt_reg[18]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X37Y40   Driver_PWM0/Period_Cnt_reg[1]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X39Y38   Driver_PWM0/Period_Cnt_reg[20]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X37Y40   Driver_PWM0/Period_Cnt_reg[21]/C
+
+
+
