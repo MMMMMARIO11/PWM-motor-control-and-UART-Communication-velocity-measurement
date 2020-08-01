@@ -1,0 +1,139 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 6048
+License: Customer
+
+Current time: 	Sat Aug 01 00:53:23 CST 2020
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 120
+Available screens: 1
+Available disk space: 10 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/xilinx/Vivado/2018.3/tps/win64/jre9.0.4
+Java executable location: 	D:/xilinx/Vivado/2018.3/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	北荣的电脑
+User home directory: C:/Users/北荣的电脑
+User working directory: D:/summer project/improve/Combine
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: D:/xilinx/Vivado
+HDI_APPROOT: D:/xilinx/Vivado/2018.3
+RDI_DATADIR: D:/xilinx/Vivado/2018.3/data
+RDI_BINDIR: D:/xilinx/Vivado/2018.3/bin
+
+Vivado preferences file location: C:/Users/北荣的电脑/AppData/Roaming/Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: C:/Users/北荣的电脑/AppData/Roaming/Xilinx/Vivado/2018.3/
+Vivado layouts directory: C:/Users/北荣的电脑/AppData/Roaming/Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	D:/xilinx/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	D:/summer project/improve/Combine/vivado.log
+Vivado journal file location: 	D:/summer project/improve/Combine/vivado.jou
+Engine tmp dir: 	D:/summer project/improve/Combine/.Xil/Vivado-6048-LAPTOP-CVUIJIL5
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/xilinx/Vivado/2018.3/ids_lite/ISE
+XILINXD_LICENSE_FILE: D:\xilinx\Vivado\2018.3\vivadoLicence.lic
+XILINX_DSP: D:/xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_FOR_ALTIUM_OVERRIDE:  
+XILINX_PLANAHEAD: D:/xilinx/Vivado/2018.3
+XILINX_SDK: D:/xilinx/SDK/2018.3
+XILINX_VIVADO: D:/xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: D:/xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 558 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 80 MB (+80909kb) [00:00:23]
+// [Engine Memory]: 542 MB (+417364kb) [00:00:23]
+// bx (cp):  Open Project : addNotify
+// Opening Vivado Project: D:\summer project\improve\Combine\UART_Demo.xpr. Version: Vivado v2018.3 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {D:/summer project/improve/Combine/UART_Demo.xpr} 
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking 1237ms to process. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1241 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 578 MB. GUI used memory: 49 MB. Current time: 8/1/20, 12:53:26 AM CST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 687 MB (+122715kb) [00:00:45]
+// [GUI Memory]: 94 MB (+11261kb) [00:00:47]
+// [GUI Memory]: 105 MB (+6043kb) [00:00:48]
+// [Engine Memory]: 726 MB (+5452kb) [00:00:48]
+// WARNING: HEventQueue.dispatchEvent() is taking  6238 ms.
+// Tcl Message: open_project {D:/summer project/improve/Combine/UART_Demo.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/xilinx/Vivado/2018.3/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 747 MB. GUI used memory: 53 MB. Current time: 8/1/20, 12:53:48 AM CST
+// Tcl Message: open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 768.082 ; gain = 190.902 
+// [Engine Memory]: 779 MB (+17178kb) [00:00:51]
+// Project name: UART_Demo; location: D:/summer project/improve/Combine; part: xc7s15ftgb196-1
+dismissDialog("Open Project"); // bx (cp)
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v)]", 1); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), UART_Send0 : UART_Send (UART_Send.v)]", 4); // B (D, cp)
+// PAPropertyPanels.initPanels (BCD.v) elapsed time: 0.3s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), UART_Send0 : UART_Send (UART_Send.v), BCD0 : BCD (BCD.v)]", 5, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), UART_Send0 : UART_Send (UART_Send.v), BCD0 : BCD (BCD.v)]", 5, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), UART_Send0 : UART_Send (UART_Send.v), BCD0 : BCD (BCD.v)]", 5, false, false, false, false, false, true); // B (D, cp) - Double Click
+// [Engine Memory]: 828 MB (+11014kb) [00:01:10]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), director0 : director (director.v)]", 7, false); // B (D, cp)
+// [GUI Memory]: 113 MB (+3561kb) [00:01:10]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), director0 : director (director.v)]", 7, false, false, false, false, false, true); // B (D, cp) - Double Click
+// Elapsed time: 22 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), UART_Send0 : UART_Send (UART_Send.v)]", 4); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), test0 : test (test.v)]", 5, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), test0 : test (test.v)]", 5, false, false, false, false, false, true); // B (D, cp) - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), UART_Send0 : UART_Send (UART_Send.v)]", 4); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), UART_Send0 : UART_Send (UART_Send.v)]", 4, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), UART_Send0 : UART_Send (UART_Send.v)]", 4, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 830 MB. GUI used memory: 56 MB. Current time: 8/1/20, 1:23:52 AM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  1153 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1737 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1898 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1197 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1380 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1020 ms.

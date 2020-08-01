@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Jul 30 17:32:10 2020
+# Process ID: 25024
+# Current directory: D:/summer project/improve/UART_Demo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26840 D:\summer project\improve\UART_Demo\UART_Demo.xpr
+# Log file: D:/summer project/improve/UART_Demo/vivado.log
+# Journal file: D:/summer project/improve/UART_Demo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/summer project/improve/UART_Demo/UART_Demo.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 785.699 ; gain = 208.367
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 30 18:14:18 2020...

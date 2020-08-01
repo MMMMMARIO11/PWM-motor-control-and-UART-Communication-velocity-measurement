@@ -1,0 +1,249 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 27476
+License: Customer
+
+Current time: 	Thu Jul 30 16:37:26 CST 2020
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 120
+Available screens: 1
+Available disk space: 10 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/xilinx/Vivado/2018.3/tps/win64/jre9.0.4
+Java executable location: 	D:/xilinx/Vivado/2018.3/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	北荣的电脑
+User home directory: C:/Users/北荣的电脑
+User working directory: C:/Users/北荣的电脑/Desktop/UART_1/UART_Demo
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: D:/xilinx/Vivado
+HDI_APPROOT: D:/xilinx/Vivado/2018.3
+RDI_DATADIR: D:/xilinx/Vivado/2018.3/data
+RDI_BINDIR: D:/xilinx/Vivado/2018.3/bin
+
+Vivado preferences file location: C:/Users/北荣的电脑/AppData/Roaming/Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: C:/Users/北荣的电脑/AppData/Roaming/Xilinx/Vivado/2018.3/
+Vivado layouts directory: C:/Users/北荣的电脑/AppData/Roaming/Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	D:/xilinx/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/北荣的电脑/Desktop/UART_1/UART_Demo/vivado.log
+Vivado journal file location: 	C:/Users/北荣的电脑/Desktop/UART_1/UART_Demo/vivado.jou
+Engine tmp dir: 	C:/Users/北荣的电脑/Desktop/UART_1/UART_Demo/.Xil/Vivado-27476-LAPTOP-CVUIJIL5
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/xilinx/Vivado/2018.3/ids_lite/ISE
+XILINXD_LICENSE_FILE: D:\xilinx\Vivado\2018.3\vivadoLicence.lic
+XILINX_DSP: D:/xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_FOR_ALTIUM_OVERRIDE:  
+XILINX_PLANAHEAD: D:/xilinx/Vivado/2018.3
+XILINX_SDK: D:/xilinx/SDK/2018.3
+XILINX_VIVADO: D:/xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: D:/xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 528 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// WARNING: HEventQueue.dispatchEvent() is taking  1192 ms.
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 68 MB (+68546kb) [00:01:37]
+// [Engine Memory]: 528 MB (+402602kb) [00:01:37]
+// Opening Vivado Project: C:\Users\北荣的电脑\Desktop\UART_1\UART_Demo\UART_Demo.xpr. Version: Vivado v2018.3 
+// bx (cp):  Open Project : addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  3197 ms.
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking 746ms to process. Increasing delay to 4000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 528 MB. GUI used memory: 47 MB. Current time: 7/30/20, 4:37:27 PM CST
+// Tcl Message: open_project C:/Users/北荣的电脑/Desktop/UART_1/UART_Demo/UART_Demo.xpr 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 702 MB (+153788kb) [00:01:51]
+// [GUI Memory]: 75 MB (+3864kb) [00:01:52]
+// [GUI Memory]: 92 MB (+13876kb) [00:01:53]
+// [GUI Memory]: 102 MB (+6167kb) [00:01:53]
+// WARNING: HEventQueue.dispatchEvent() is taking  6148 ms.
+// Tcl Message: open_project C:/Users/北荣的电脑/Desktop/UART_1/UART_Demo/UART_Demo.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'D:/summer project/UART_Demo' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/xilinx/Vivado/2018.3/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 746.660 ; gain = 185.160 
+// [Engine Memory]: 801 MB (+67314kb) [00:01:58]
+// Project name: UART_Demo; location: C:/Users/北荣的电脑/Desktop/UART_1/UART_Demo; part: xc7s15ftgb196-1
+dismissDialog("Open Project"); // bx (cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 801 MB. GUI used memory: 52 MB. Current time: 7/30/20, 4:37:46 PM CST
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 12 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v)]", 1); // B (D, cp)
+// PAPropertyPanels.initPanels (UART_Send.v) elapsed time: 0.3s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), UART_Send0 : UART_Send (UART_Send.v)]", 4, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), UART_Send0 : UART_Send (UART_Send.v)]", 4, false, false, false, false, false, true); // B (D, cp) - Double Click
+// [Engine Memory]: 841 MB (+610kb) [00:02:14]
+// Elapsed time: 27 seconds
+selectCodeEditor("UART_Send.v", 806, 214); // cl (w, cp)
+// Elapsed time: 38 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), test0 : test (test.v)]", 5, false); // B (D, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 868 MB. GUI used memory: 54 MB. Current time: 7/30/20, 4:39:06 PM CST
+// Elapsed time: 87 seconds
+selectCodeEditor("UART_Send.v", 957, 258); // cl (w, cp)
+// [GUI Memory]: 109 MB (+1902kb) [00:05:36]
+// Elapsed time: 49 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), UART0 : Driver_UART (Driver_UART.v)]", 3, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), UART0 : Driver_UART (Driver_UART.v), UART_Rx0 : UART_Rx (Driver_UART.v)]", 5, false, false, false, false, false, true); // B (D, cp) - Double Click
+// Elapsed time: 286 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), UART_Send0 : UART_Send (UART_Send.v)]", 7, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), UART_Send0 : UART_Send (UART_Send.v)]", 7, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectCodeEditor("UART_Send.v", 406, 220); // cl (w, cp)
+// Elapsed time: 109 seconds
+selectCodeEditor("UART_Send.v", 405, 197); // cl (w, cp)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 224 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), test0 : test (test.v)]", 8, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, UART_Demo (UART_Demo.v), test0 : test (test.v)]", 8, false, false, false, false, false, true); // B (D, cp) - Double Click
+// Elapsed time: 23 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Driver_UART.v", 2); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "UART_Send.v", 1); // k (j, cp)
+// Elapsed time: 45 seconds
+selectCodeEditor("UART_Send.v", 350, 123); // cl (w, cp)
+// Elapsed time: 204 seconds
+selectCodeEditor("UART_Send.v", 77, 295); // cl (w, cp)
+// Elapsed time: 21 seconds
+selectCodeEditor("UART_Send.v", 153, 288); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 261, 288); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 313, 267); // cl (w, cp)
+// Elapsed time: 11 seconds
+selectCodeEditor("UART_Send.v", 176, 221); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 187, 220); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'c'); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 191, 211); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 126, 244); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 149, 224); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 153, 242); // cl (w, cp)
+// Elapsed time: 15 seconds
+selectCodeEditor("UART_Send.v", 158, 216); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 149, 214); // cl (w, cp)
+// Elapsed time: 70 seconds
+selectCodeEditor("UART_Send.v", 190, 339); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 181, 380); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+// Elapsed time: 58 seconds
+selectCodeEditor("UART_Send.v", 192, 288); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 129, 311); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("UART_Send.v", 346, 347); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 302, 171); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("UART_Send.v", 658, 188); // cl (w, cp)
+// Elapsed time: 11 seconds
+selectCodeEditor("UART_Send.v", 675, 203); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 133, 195); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 122, 212); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 126, 194); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'c'); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // B (f, cp)
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // B (f, cp)
+selectCodeEditor("UART_Send.v", 672, 196); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'c'); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 653, 197); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 132, 221); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 316, 223); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 658, 219); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 134, 242); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 313, 240); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 136, 265); // cl (w, cp)
+// Elapsed time: 34 seconds
+selectCodeEditor("UART_Send.v", 301, 356); // cl (w, cp)
+// Elapsed time: 21 seconds
+selectCodeEditor("UART_Send.v", 658, 223); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'c'); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 143, 335); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 317, 327); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 646, 339); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 627, 336); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 634, 336); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+// Elapsed time: 21 seconds
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 129, 376); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 325, 261); // cl (w, cp)
+// Elapsed time: 14 seconds
+selectCodeEditor("UART_Send.v", 675, 378); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 652, 319); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "UART_Send.v", 'v'); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 125, 351); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 323, 329); // cl (w, cp)
+selectCodeEditor("UART_Send.v", 478, 356); // cl (w, cp)
+// Elapsed time: 14 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cp): Synthesis is Out-of-date: addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cp)

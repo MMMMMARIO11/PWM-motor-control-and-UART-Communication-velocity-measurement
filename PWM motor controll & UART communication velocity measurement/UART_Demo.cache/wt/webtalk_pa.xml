@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document>
+<!--The data in this file is primarily intended for consumption by Xilinx tools.
+The structure and the elements are likely to change over the next few releases.
+This means code written to parse this file will need to be revisited each subsequent release.-->
+<application name="pa" timeStamp="Fri Jul 31 14:47:57 2020">
+<section name="Project Information" visible="false">
+<property name="ProjectID" value="e7b82488d58c49d8b58a63bfb27051a4" type="ProjectID"/>
+<property name="ProjectIteration" value="32" type="ProjectIteration"/>
+</section>
+<section name="PlanAhead Usage" visible="true">
+<item name="Project Data">
+<property name="SrcSetCount" value="1" type="SrcSetCount"/>
+<property name="ConstraintSetCount" value="1" type="ConstraintSetCount"/>
+<property name="DesignMode" value="RTL" type="DesignMode"/>
+<property name="SynthesisStrategy" value="Vivado Synthesis Defaults" type="SynthesisStrategy"/>
+<property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
+</item>
+<item name="Java Command Handlers">
+<property name="AddSources" value="3" type="JavaHandler"/>
+<property name="CoreView" value="3" type="JavaHandler"/>
+<property name="CustomizeCore" value="4" type="JavaHandler"/>
+<property name="EditDelete" value="3" type="JavaHandler"/>
+<property name="EditPaste" value="1" type="JavaHandler"/>
+<property name="OpenProject" value="7" type="JavaHandler"/>
+<property name="RecustomizeCore" value="1" type="JavaHandler"/>
+<property name="RunBitgen" value="34" type="JavaHandler"/>
+<property name="RunImplementation" value="2" type="JavaHandler"/>
+<property name="RunSynthesis" value="2" type="JavaHandler"/>
+<property name="ShowView" value="5" type="JavaHandler"/>
+</item>
+<item name="Gui Handlers">
+<property name="BaseDialog_CANCEL" value="3" type="GuiHandlerData"/>
+<property name="BaseDialog_OK" value="54" type="GuiHandlerData"/>
+<property name="BaseDialog_YES" value="29" type="GuiHandlerData"/>
+<property name="CommandsInput_TYPE_TCL_COMMAND_HERE" value="1" type="GuiHandlerData"/>
+<property name="CoreTreeTablePanel_CORE_TREE_TABLE" value="12" type="GuiHandlerData"/>
+<property name="CreateSrcFileDialog_FILE_NAME" value="3" type="GuiHandlerData"/>
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="139" type="GuiHandlerData"/>
+<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="45" type="GuiHandlerData"/>
+<property name="GettingStartedView_OPEN_PROJECT" value="7" type="GuiHandlerData"/>
+<property name="HJFileChooserRecentListPreview_RECENT_DIRECTORIES" value="1" type="GuiHandlerData"/>
+<property name="MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN" value="1" type="GuiHandlerData"/>
+<property name="MsgTreePanel_MESSAGE_VIEW_TREE" value="6" type="GuiHandlerData"/>
+<property name="MsgView_CRITICAL_WARNINGS" value="1" type="GuiHandlerData"/>
+<property name="MsgView_WARNING_MESSAGES" value="2" type="GuiHandlerData"/>
+<property name="PACommandNames_ADD_SOURCES" value="2" type="GuiHandlerData"/>
+<property name="PACommandNames_AUTO_UPDATE_HIER" value="2" type="GuiHandlerData"/>
+<property name="PACommandNames_RUN_BITGEN" value="1" type="GuiHandlerData"/>
+<property name="PAViews_CODE" value="2" type="GuiHandlerData"/>
+<property name="ProgressDialog_CANCEL" value="1" type="GuiHandlerData"/>
+<property name="RDICommands_DELETE" value="3" type="GuiHandlerData"/>
+<property name="RDICommands_PASTE" value="1" type="GuiHandlerData"/>
+<property name="RDICommands_SAVE_FILE" value="64" type="GuiHandlerData"/>
+<property name="RDICommands_SETTINGS" value="1" type="GuiHandlerData"/>
+<property name="RDICommands_UNDO" value="24" type="GuiHandlerData"/>
+<property name="ReportIPStatusInfoDialog_IGNORE" value="1" type="GuiHandlerData"/>
+<property name="SaveProjectUtils_SAVE" value="1" type="GuiHandlerData"/>
+<property name="SimpleOutputProductDialog_CLOSE_DIALOG_UNSAVED_CHANGES_WILL" value="3" type="GuiHandlerData"/>
+<property name="SrcChooserPanel_CREATE_FILE" value="3" type="GuiHandlerData"/>
+<property name="SrcMenu_IP_DOCUMENTATION" value="3" type="GuiHandlerData"/>
+<property name="SyntheticaStateMonitor_CANCEL" value="2" type="GuiHandlerData"/>
+<property name="TclConsoleView_TCL_CONSOLE_CODE_EDITOR" value="2" type="GuiHandlerData"/>
+<property name="TouchpointSurveyDialog_NO" value="2" type="GuiHandlerData"/>
+<property name="XPG_IPSymbol_SHOW_DISABLED_PORTS" value="3" type="GuiHandlerData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="1" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="0" type="TclMode"/>
+</item>
+</section>
+</application>
+</document>
